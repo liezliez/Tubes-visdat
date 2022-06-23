@@ -16,7 +16,7 @@ import pandas as pd
 pd.options.mode.chained_assignment = None  # default='warn'
 import numpy as np
 
-!pip install bokeh
+# !pip install bokeh
 
 from bokeh.io import output_file, output_notebook,curdoc
 from bokeh.plotting import figure, show
@@ -37,7 +37,7 @@ output_notebook()
 
 # source : https://www.kaggle.com/datasets/jackogozaly/steam-player-data
 
-!gdown --id 1yry1uuGGz_LBCdGMamA3eL0ptApAHnYd
+# !gdown --id 1yry1uuGGz_LBCdGMamA3eL0ptApAHnYd
 
 df_steam= pd.read_csv("Valve_Player_Data.csv").dropna()
 df_steam.head()
@@ -223,4 +223,6 @@ layout=layout([
                [tabs],
 ])
 
-show(layout)
+# show(layout)
+
+curdoc().add_root(column(layout))
